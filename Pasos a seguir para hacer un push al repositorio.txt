@@ -1,0 +1,14 @@
+1. git init
+
+
+
+2. git add .
+
+
+3. git commit -m "comentario"
+
+
+4. git merge origin/main
+
+
+5. git push origin main

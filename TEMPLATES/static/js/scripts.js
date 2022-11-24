@@ -245,3 +245,4 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+

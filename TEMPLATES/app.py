@@ -136,6 +136,97 @@ def deleteevento(id):
     flash('Evento Eliminado correctamente')
     return redirect(url_for('adminevento'))    
     
+@app.route('/index.html')
+def index():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('index.html',usuarios=data)    
+
+@app.route('/loginutec.html')
+def loginutec():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('loginutec.html',usuarios=data)
+
+@app.route('/loginvisita.html')
+def loginvisita():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('loginvisita.html',usuarios=data)    
+
+@app.route('/mainutec.html')
+def mainutec():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('mainutec.html',usuarios=data) 
+
+@app.route('/mainvisitantes.html')
+def mainvisitantes():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('mainvisitantes.html',usuarios=data) 
+
+@app.route('/notificaciones.html')
+def notificaciones():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('notificaciones.html',usuarios=data) 
+
+@app.route('/utecespacios1.html')
+def utecespacios1():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('utecespacios1.html',usuarios=data) 
+
+@app.route('/utecespacios2.html')
+def utecespacios2():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('utecespacios2.html',usuarios=data) 
+
+@app.route('/utecEstadisticas.html')
+def utecEstadisticas():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('utecEstadisticas.html',usuarios=data) 
+
+@app.route('/utecEstRap.html')
+def utecEstRap():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('utecEstRap.html',usuarios=data) 
+
+@app.route('/visitaespacios1.html')
+def visitaespacios1():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('visitaespacios1.html',usuarios=data) 
+
+@app.route('/visitanteEstRap.html')
+def visitanteEstRap():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('visitanteEstRap.html',usuarios=data) 
+
+@app.route('/vistaespacios2.html')
+def vistaespacios2():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from usuarios')
+    data = cur.fetchall()
+    return render_template('vistaespacios2.html',usuarios=data) 
+
 if __name__ == '__main__':
     app.run(debug=True,port=3000)
 
